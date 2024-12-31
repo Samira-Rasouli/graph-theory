@@ -51,5 +51,7 @@ graph = [
     [0, 0, 0, 0, 0, 1, 1, 0]
 ]
 
+![hamiltonian_cycle](https://github.com/user-attachments/assets/b527d1cb-c2bf-407f-82a7-1b7fcb90155b)
 
-![hamiltonian_cycle](https://github.com/user-attachments/assets/45f1ed80-e58d-47aa-9903-e1a90b23b0e8)
+
+
