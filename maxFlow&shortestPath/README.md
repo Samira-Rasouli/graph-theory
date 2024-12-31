@@ -87,7 +87,9 @@ Run the script to view the shortest paths, maximum flow, edge predictions, and g
 **Graph Details:**
 
 Shortest path from 2 to 9: [2, 5, 7, 1, 9], Length: 4
+
 Maximum flow from 6 to 9: 1
+
 Predicted probability of edge between 5 and 8: 0.17
 
 **Visualization:**
