@@ -1,1 +1,1 @@
-# graph-theory
+# Graph Theory implementations in Python 
