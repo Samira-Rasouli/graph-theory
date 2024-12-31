@@ -86,12 +86,13 @@ Run the script to view the shortest paths, maximum flow, edge predictions, and g
 **Example Output**
 **Graph Details:**
 
-Shortest path from 3 to 0: [3, 0], Length: 1
-Maximum flow from 7 to 9: 0
-Predicted probability of edge between 6 and 1: 0.33
+Shortest path from 2 to 9: [2, 5, 7, 1, 9], Length: 4
+Maximum flow from 6 to 9: 1
+Predicted probability of edge between 5 and 8: 0.17
 
 **Visualization:**
 
 Nodes and edges are drawn with capacities displayed.
 
-![image](https://github.com/user-attachments/assets/43b493ce-cc24-4efa-a989-d619d08fbb55)
+![image](https://github.com/user-attachments/assets/206964f7-c6c9-4003-b553-a0479792193f)
+
