@@ -136,11 +136,8 @@ Draws the graph and highlights the edges belonging to the maximal matching in re
 
 
 #Run the program
-
 graph = generate_graph(10, 0.3)
-
 max_matching = tabu_search(graph)
-
 draw_graph(graph, max_matching)
 
 Generates a random graph with 10 nodes and 0.3 probability for each edge.
