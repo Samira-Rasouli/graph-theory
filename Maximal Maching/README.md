@@ -1,21 +1,25 @@
-Tabu Search for Maximal Matching in a Graph
-Purpose of the Code
-This code implements the Tabu Search algorithm to find a maximal matching in a randomly generated graph. Finally, it visualizes the graph with the matching edges highlighted in red.
+#Tabu Search for Maximal Matching in a Graph
 
-Code Sections and Their Functions
-1. Generating a Random Graph
-python
-Copy
-Edit
+**Purpose of the Code**
+
+This code implements the Tabu Search algorithm to find a **maximal matching** in a **randomly generated graph**. Finally, it visualizes the graph with the matching edges highlighted in red.
+
+**Code Sections and Their Functions**
+
+**1. Generating a Random Graph**
+
 def generate_graph(n, p):
     """Generate a random graph with n nodes and probability p for each edge."""
+
     G = nx.erdos_renyi_graph(n, p)
+
     return G
-Generates a random graph using the Erdős–Rényi model, where each edge is added with probability p.
-2. Checking if a Set of Edges Forms a Matching
-python
-Copy
-Edit
+
+Generates a **random graph** using the **Erdős–Rényi** model, where each edge is added with probability p.
+
+**2. Checking if a Set of Edges Forms a Matching**
+
+
 def is_matching(M, G):
     """Check if the set of edges forms a valid matching."""
     nodes = set()
@@ -25,12 +29,13 @@ def is_matching(M, G):
         nodes.add(u)
         nodes.add(v)
     return True
+
 Ensures that the set of edges M forms a valid matching.
+
 In a matching, no vertex should appear in more than one edge.
-3. Constructing a Maximal Matching Using a Greedy Approach
-python
-Copy
-Edit
+
+**3. Constructing a Maximal Matching Using a Greedy Approach**
+
 def maximal_matching(G):
     """Generate a maximal matching greedily."""
     M = set()
@@ -41,12 +46,14 @@ def maximal_matching(G):
             nodes.add(u)
             nodes.add(v)
     return M
+
 Creates a maximal matching (not necessarily maximum).
+
 Iterates through edges and adds only those that do not share vertices with existing edges.
-4. Generating Neighboring Matchings for Tabu Search
-python
-Copy
-Edit
+
+**4. Generating Neighboring Matchings for Tabu Search**
+
+
 def create_neighbors(M, G):
     """Create neighbors by adding new edges and removing conflicting ones."""
     neighbors = []
@@ -61,12 +68,14 @@ def create_neighbors(M, G):
             if is_matching(new_M, G):
                 neighbors.append(new_M)
     return neighbors
+    
 Generates new neighboring solutions by adding a new edge and removing conflicting edges.
+
 If the modified set still forms a valid matching, it is added to the list of neighbors.
-5. Implementing the Tabu Search Algorithm
-python
-Copy
-Edit
+
+**5. Implementing the Tabu Search Algorithm**
+
+
 def tabu_search(G, max_iter=10, tabu_size=3):
     """Run the Tabu Search algorithm to find the best maximal matching."""
     current_M = maximal_matching(G)
@@ -92,14 +101,18 @@ def tabu_search(G, max_iter=10, tabu_size=3):
             tabu_list.pop(0)
 
     return best_M
+    
 Executes Tabu Search to find a better maximal matching.
+
 In each iteration, selects the best neighbor that is not in the tabu list.
+
 If the new matching is better, it becomes the best found solution.
+
 The tabu list prevents revisiting previous solutions, maintaining a history of the last three steps.
-6. Visualizing the Graph and the Found Matching
-python
-Copy
-Edit
+
+**6. Visualizing the Graph and the Found Matching**
+
+
 def draw_graph(G, matching):
     """Visualize the graph with matching edges highlighted in red."""
     pos = nx.spring_layout(G)
@@ -107,15 +120,19 @@ def draw_graph(G, matching):
     nx.draw(G, pos, with_labels=True, edge_color='gray')
     nx.draw_networkx_edges(G, pos, edgelist=matching, edge_color='red', width=2)
     plt.show()
+    
 Draws the graph and highlights the edges belonging to the maximal matching in red.
-7. Running the Program
-python
-Copy
-Edit
+
+**7. Running the Program**
+
+
 # Run the program
 graph = generate_graph(10, 0.3)
 max_matching = tabu_search(graph)
 draw_graph(graph, max_matching)
+
 Generates a random graph with 10 nodes and 0.3 probability for each edge.
+
 Executes Tabu Search to find a maximal matching.
+
 Visualizes the graph with the found matching.
