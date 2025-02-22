@@ -22,7 +22,7 @@ Generates a **random graph** using the **Erdős–Rényi** model, where each edg
 **2. Checking if a Set of Edges Forms a Matching**
 
 
-def is_matching(M, G):
+    def is_matching(M, G):
 
     """Check if the set of edges forms a valid matching."""
     
