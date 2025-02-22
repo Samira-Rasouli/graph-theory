@@ -135,8 +135,6 @@ Draws the graph and highlights the edges belonging to the maximal matching in re
 **7. Running the Program**
 
 
-  #Run the program
-
   graph = generate_graph(10, 0.3)
 
   max_matching = tabu_search(graph)
