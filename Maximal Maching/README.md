@@ -60,7 +60,9 @@ Iterates through edges and adds only those that do not share vertices with exist
 
 
 def create_neighbors(M, G):
+
     """Create neighbors by adding new edges and removing conflicting ones."""
+    
     neighbors = []
     edges = list(G.edges())
     new_M = M.copy()
