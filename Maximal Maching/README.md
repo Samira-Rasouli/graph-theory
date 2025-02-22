@@ -39,6 +39,7 @@ In a matching, no vertex should appear in more than one edge.
 **3. Constructing a Maximal Matching Using a Greedy Approach**
 
 def maximal_matching(G):
+
     """Generate a maximal matching greedily."""
     M = set()
     nodes = set()
