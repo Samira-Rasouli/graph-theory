@@ -40,7 +40,7 @@ In a matching, no vertex should appear in more than one edge.
 
 **3. Constructing a Maximal Matching Using a Greedy Approach**
 
-def maximal_matching(G):
+    def maximal_matching(G):
 
     """Generate a maximal matching greedily."""
     M = set()
@@ -59,7 +59,7 @@ Iterates through edges and adds only those that do not share vertices with exist
 **4. Generating Neighboring Matchings for Tabu Search**
 
 
-def create_neighbors(M, G):
+    def create_neighbors(M, G):
 
     """Create neighbors by adding new edges and removing conflicting ones."""
     
@@ -83,7 +83,7 @@ If the modified set still forms a valid matching, it is added to the list of nei
 **5. Implementing the Tabu Search Algorithm**
 
 
-def tabu_search(G, max_iter=10, tabu_size=3):
+    def tabu_search(G, max_iter=10, tabu_size=3):
     """Run the Tabu Search algorithm to find the best maximal matching."""
     current_M = maximal_matching(G)
     best_M = current_M
@@ -120,7 +120,7 @@ The tabu list prevents revisiting previous solutions, maintaining a history of t
 **6. Visualizing the Graph and the Found Matching**
 
 
-def draw_graph(G, matching):
+    def draw_graph(G, matching):
 
     """Visualize the graph with matching edges highlighted in red."""
     
@@ -135,7 +135,7 @@ Draws the graph and highlights the edges belonging to the maximal matching in re
 **7. Running the Program**
 
 
-# Run the program
+#Run the program
 
 graph = generate_graph(10, 0.3)
 
