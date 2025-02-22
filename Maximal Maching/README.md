@@ -9,6 +9,7 @@ This code implements the Tabu Search algorithm to find a **maximal matching** in
 **1. Generating a Random Graph**
 
 def generate_graph(n, p):
+
     """Generate a random graph with n nodes and probability p for each edge."""
 
     G = nx.erdos_renyi_graph(n, p)
