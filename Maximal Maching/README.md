@@ -23,7 +23,9 @@ Generates a **random graph** using the **Erdős–Rényi** model, where each edg
 
 
 def is_matching(M, G):
+
     """Check if the set of edges forms a valid matching."""
+    
     nodes = set()
     for u, v in M:
         if u in nodes or v in nodes:
