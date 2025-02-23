@@ -146,3 +146,6 @@ Draws the graph and highlights the edges belonging to the maximal matching in re
 Executes Tabu Search to find a maximal matching.
 
 Visualizes the graph with the found matching.
+
+![Figure_1](https://github.com/user-attachments/assets/3871c812-6e86-4912-b8ce-77621f05e71e)
+
